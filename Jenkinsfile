@@ -3,12 +3,7 @@ pipeline {
     agent any
     
     stages {
-        stage("checkout") {
-            steps {
-                git branch:'main', url:'https://github.com/drebnija/petclinic'
-            }
-        }
-        
+
         stage("build") {
             steps {
                 bat 'mvnw.cmd package'
